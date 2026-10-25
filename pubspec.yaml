@@ -1,0 +1,53 @@
+name: mi_primera_app
+description: "TripTrip Flutter app"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # ── Backend ─────────────────────────────────────────────
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  firebase_analytics: ^11.3.3   # NUEVO — eventos de validación (K-factor, funnel)
+  supabase_flutter: ^2.0.0
+
+  # ── Network / data ──────────────────────────────────────
+  http: ^1.2.0
+  shared_preferences: ^2.3.0
+  url_launcher: ^6.3.0           # NUEVO — abrir links de reserva (afiliación)
+
+  # ── UI ──────────────────────────────────────────────────
+  cupertino_icons: ^1.0.8
+  flutter_map: ^7.0.0
+  latlong2: ^0.9.1
+  cached_network_image: ^3.4.0   # NUEVO — cachea avatares (mejora arranque)
+  image_picker: ^1.1.2           # NUEVO — elegir fotos (Fase A)
+  flutter_image_compress: ^2.3.0 # NUEVO — comprimir antes de subir (no web)
+
+  # ── Sharing badges en Instagram ────────────────────────
+  share_plus: ^10.0.0            # NUEVO — share nativo (fallback)
+  social_share: ^2.3.1           # NUEVO — share directo a Instagram Stories
+  path_provider: ^2.1.0          # NUEVO — guardar imágenes temporales
+
+  # ── Location ────────────────────────────────────────────
+  geolocator: ^13.0.0            # GPS — detectar ubicación actual
+
+  # ── Ads ───────────────────────────────────────────────────
+  google_mobile_ads: ^5.2.0      # NUEVO — AdMob (banner + feed); no-op en web
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
